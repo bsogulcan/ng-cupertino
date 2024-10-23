@@ -1,0 +1,19 @@
+<div class="segmented-control" [ngClass]="{ disabled: disabled }">
+    <div class="segments-container" style="align-items: center">
+        @for (option of options; track option.id; let i = $index; let last = $last; let first = $first) {
+            <button
+                    class="segment"
+                    [class.selected]="selectedIndex === i"
+                    (click)="onSelect(option,i)"
+                    [disabled]="disabled"
+                    type="button"
+            >
+                {{ option.label }}
+            </button>
+            <!-- seperator -->
+            @if (!last && (selectedIndex !== i && selectedIndex - 1 !== i)) {
+                <div class="seperator"></div>
+            }
+        }
+    </div>
+</div>

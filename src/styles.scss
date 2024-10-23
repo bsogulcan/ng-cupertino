@@ -1,0 +1,131 @@
+:root {
+  --background-primary: #ffffff;
+  --background-secondary: #f2f2f7;
+  --background-tertiary: #ffffff;
+
+  --background-grouped-primary: #f2f2f7;
+  --background-grouped-secondary: #ffffff;
+  --background-grouped-tertiary: #f2f2f7;
+
+  --red: #ff3b30;
+  --orange: #ff9500;
+  --yellow: #ffcc00;
+  --green: #34c759;
+  --mint: #00c7be;
+  --teal: #30b0c7;
+  --cyan: #32ade6;
+  --blue: #007aff;
+  --indigo: #5856d6;
+  --purple: #af52de;
+  --pink: #ff2d55;
+  --brown: #a2845e;
+
+  // Grays
+  --black: #000000;
+  --white: #ffffff;
+  --gray: #8e8e93;
+  --gray-2: #aeaeb2;
+  --gray-3: #c7c7cc;
+  --gray-4: #d1d1d6;
+  --gray-5: #e5e5ea;
+  --gray-6: #f2f2f7;
+
+  // Fills (with percentages)
+  --fill-primary: rgba(120, 120, 128, 0.2); // 787880 with 20% opacity
+  --fill-secondary: rgba(120, 120, 128, 0.16); // 787880 with 16% opacity
+  --fill-tertiary: rgba(120, 120, 128, 0.12); // 787880 with 12% opacity
+  --fill-quaternary: rgba(120, 120, 128, 0.08); // 787880 with 8% opacity
+
+  // Labels
+  --label-primary: #000000;
+  --label-secondary: rgba(60, 60, 67, 0.6); // #3C3C43 at 60%
+  --label-tertiary: rgba(60, 60, 67, 0.3); // #3C3C43 at 30%
+  --label-quaternary: rgba(60, 60, 67, 0.18); // #3C3C43 at 18%
+
+  // Overlays
+  --overlay-default: rgba(0, 0, 0, 0.2); // #000000 at 20%
+  --overlay-activity-view-controller: rgba(0, 0, 0, 0.12); // #000000 at 12%
+
+  // Separators
+  --separator-opaque: #c6c6c8;
+  --separator-non-opaque: rgba(84, 84, 86, 0.34); // #545456 at 34%
+
+  // Miscellaneous
+  --misc-alert-menu-separator: rgba(128, 128, 128, 0.55); // #808080 at 55%
+  --misc-bar-border: rgba(0, 0, 0, 0.3); // #000000 at 30%
+  --misc-button-disabled-bg: rgba(118, 118, 128, 0.12); // #767680 at 12%
+  --misc-button-tinted-fill: rgba(0, 122, 255, 0.15); // #007AFF at 15%
+
+  // Floating Tab
+  --floating-tab-selected: #007aff;
+  --floating-tab-unselected: rgba(9, 9, 9, 0.93); // #090909 at 93%
+
+  --background-segmented-control: #ffffff;
+}
+
+.dark {
+  --background-primary: #000000;
+  --background-secondary: #1c1c1e;
+  --background-tertiary: #2c2c2e;
+
+  --background-grouped-primary: #000000;
+  --background-grouped-secondary: #1c1c1e;
+  --background-grouped-tertiary: #2c2c2e;
+
+  --red: #ff453a;
+  --orange: #ff9f0a;
+  --yellow: #ffd60a;
+  --green: #30d158;
+  --mint: #63e6e2;
+  --teal: #40cbe0;
+  --cyan: #64d2ff;
+  --blue: #0a84ff;
+  --indigo: #5e5ce6;
+  --purple: #bf5af2;
+  --pink: #ff375f;
+  --brown: #ac8e68;
+
+  // Grays
+  --black: #000000;
+  --white: #ffffff;
+  --gray: #8e8e93;
+  --gray-2: #636366;
+  --gray-3: #48484a;
+  --gray-4: #3a3a3c;
+  --gray-5: #2c2c2e;
+  --gray-6: #1c1c1e;
+
+  // Labels for dark mode
+  --label-primary: #ffffff;
+  --label-secondary: rgba(235, 235, 245, 0.6); // #EBEBF5 at 60%
+  --label-tertiary: rgba(235, 235, 245, 0.3); // #EBEBF5 at 30%
+  --label-quaternary: rgba(235, 235, 245, 0.16); // #EBEBF5 at 16%
+
+  // Fills (with percentages)
+  --fill-primary: rgba(120, 120, 128, 0.36); // 787880 with 20% opacity
+  --fill-secondary: rgba(120, 120, 128, 0.32); // 787880 with 16% opacity
+  --fill-tertiary: rgba(120, 120, 128, 0.24); // 787880 with 24% opacity
+  --fill-quaternary: rgba(120, 120, 128, 0.18); // 787880 with 8% opacity
+
+  // Overlays
+  --overlay-default: rgba(0, 0, 0, 0.49); // #000000 at 49%
+  --overlay-activity-view-controller: rgba(0, 0, 0, 0.29); // #000000 at 29%
+
+  // Separators
+  --separator-opaque: #38383a;
+  --separator-non-opaque: rgba(84, 84, 86, 0.6); // #545456 at 60%
+
+  // Miscellaneous
+  --misc-alert-menu-separator: rgba(128, 128, 128, 0.7); // #808080 at 70%
+  --misc-bar-border: rgba(255, 255, 255, 0.15); // #FFFFFF at 15%
+  --misc-button-disabled-bg: rgba(118, 118, 128, 0.25); // #767680 at 25%
+  --misc-button-tinted-fill: rgba(10, 132, 255, 0.15); // #0A84FF at 15%
+
+  // Floating Tab
+  --floating-tab-selected: #ffffff;
+  --floating-tab-unselected: rgba(171, 171, 177, 0.93); // #ABABB1 at 93%
+
+  --background-segmented-control: #636366;
+}
+
+@import "./fonts.scss";

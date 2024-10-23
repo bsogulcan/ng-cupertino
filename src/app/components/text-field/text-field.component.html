@@ -1,0 +1,35 @@
+<div class="field-container"
+     [class.focused]="isFocused"
+>
+    <div class="input-row">
+        <input
+                [type]="type"
+                [id]="id"
+                class="field-input"
+                [value]="value"
+                [placeholder]="placeholder"
+                [disabled]="disabled"
+                (focus)="onFocus()"
+                (blur)="onBlur()"
+                (input)="onInputChange($event)"
+        />
+
+        <!--TODO:: height problem-->
+        @if (value && showClearButton) {
+            <i-button
+                    hidden="hidden"
+                    [size]="'small'"
+                    [style]="'plain'"
+                    (click)="clearInput()"
+                    type="button"
+                    aria-label="Clear input">
+                ✕
+            </i-button>
+        }
+    </div>
+
+    @if (showBorder) {
+        <div class="border-bottom"></div>
+    }
+
+</div>

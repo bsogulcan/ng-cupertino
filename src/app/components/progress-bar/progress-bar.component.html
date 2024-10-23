@@ -1,0 +1,12 @@
+<div class="i-progress-bar">
+  <div
+    class="i-progress-bar-loading-bar"
+    [ngStyle]="{ width: value + '%' }"
+    [ngClass]="{ circle: shape === 'circle' }"
+  ></div>
+  @if(status){
+  <p class="caption-2">
+    {{ status }}
+  </p>
+  }
+</div>

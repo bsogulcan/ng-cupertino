@@ -1,0 +1,145 @@
+@import "../../../fonts.scss";
+
+.nav-container {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  width: 100%;
+  background-color: var(--background-primary);
+}
+
+.nav-bar {
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8px;
+  position: relative;
+}
+
+.nav-bar.with-shadow {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.nav-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  min-width: 0;
+}
+
+.nav-section.leading {
+  justify-content: flex-start;
+}
+
+.nav-section.trailing {
+  justify-content: flex-end;
+}
+
+.nav-section.title {
+  flex: 2;
+  justify-content: flex-start;
+  padding: 0 8px;
+}
+
+.nav-section.title.center-title {
+  justify-content: center;
+  text-align: center;
+}
+
+.button-group {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.nav-title {
+  @extend .body;
+  font-weight: 600;
+  color: var(--label-primary);
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.nav-title.animated {
+  transition: opacity 0.2s ease;
+  opacity: 0;
+}
+
+.nav-button {
+  @extend .body;
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  border: none;
+  background: none;
+  color: var(--blue);
+  font-size: 17px;
+  font-weight: 400;
+  cursor: pointer;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  transition: opacity 0.2s ease;
+  border-radius: 6px;
+  white-space: nowrap;
+  min-height: 32px;
+}
+
+.nav-button:active {
+  opacity: 0.6;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.nav-button.primary {
+  font-weight: 600;
+}
+
+.nav-button.danger {
+  color: #FF3B30;
+}
+
+.icon {
+  font-size: 24px;
+  margin-right: 4px;
+}
+
+.icon:only-child {
+  margin-right: 0;
+}
+
+.large-title-container {
+  padding: 0 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+//@media (prefers-color-scheme: dark) {
+//  .nav-container {
+//    background-color: rgba(0, 0, 0, 0.85);
+//  }
+//
+//  .nav-title, .large-title {
+//    color: #FFFFFF;
+//  }
+//
+//  .nav-bar.with-shadow {
+//    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+//  }
+//
+//  .nav-button:active {
+//    background-color: rgba(255, 255, 255, 0.1);
+//  }
+//}
+
+@media (max-width: 768px) {
+  .nav-button {
+    padding: 6px;
+  }
+
+  .nav-button .icon:not(:only-child) + span {
+    display: none;
+  }
+}

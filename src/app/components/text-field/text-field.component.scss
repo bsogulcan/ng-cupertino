@@ -1,0 +1,43 @@
+@import "../../../fonts.scss";
+
+field-container {
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.input-row {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.field-input {
+  @extend .body;
+  width: 100%;
+  height: 22px;
+  padding: 0;
+  border: none;
+  color: var(--label-primary);
+  background: transparent;
+  caret-color: var(--blue);
+}
+
+.field-input:focus {
+  outline: none;
+}
+
+.field-input::placeholder {
+  color: var(--label-tertiary);
+}
+
+.border-bottom {
+  position: relative;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.15);
+  margin-top: 8px;
+}
+
+.focused .border-bottom {
+  background: var(--blue);
+  height: 1px;
+}

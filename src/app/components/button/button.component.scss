@@ -1,0 +1,93 @@
+@import "../../../fonts.scss";
+
+button {
+  border-width: 0px;
+  height: 28px;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  @extend .subheadline;
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+
+  &.small {
+    height: 28px;
+    border-radius: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+
+  &.medium {
+    height: 34px;
+    border-radius: 40px;
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+
+  &.large {
+    @extend .body;
+    height: 50px;
+    border-radius: 12px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+
+  &.disabled {
+    pointer-events: none;
+    background-color: var(--fill-tertiary);
+    color:  var(--label-tertiary);
+  }
+
+  &.filled {
+    background-color:  var(--blue);
+    color:  var(--white);
+    
+    &.disabled {
+      background-color:  var(--fill-tertiary);
+      color:  var(--label-tertiary);
+    }
+  }
+
+  &.tinted {
+    background-color: var(--misc-button-tinted-fill);
+    color:  var(--blue);
+    
+    &.disabled {
+      background-color:  var(--fill-tertiary);
+      color:  var(--label-tertiary);
+    }
+  }
+
+  &.gray {
+    background-color:  var(--fill-tertiary);
+    color:  var(--blue);
+    
+    &.disabled {
+      background-color:  var(--fill-tertiary); 
+      color:  var(--label-tertiary);
+    }
+  }
+
+  &.plain {
+    background-color: transparent;
+    color: var(--blue);
+
+    &.disabled {
+      color: var(--label-tertiary);
+    }
+  }
+}
