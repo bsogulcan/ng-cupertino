@@ -37,11 +37,11 @@ It follows Apple's Human Interface Design guidelines for appearance and interact
 
 ## Usage
 \`\`\`html
-<app-apple-toggle
+<app-i-toggle
   [(checked)]="isEnabled"
   [label]="'Enable Feature'"
   (checkedChange)="onToggleChange($event)">
-</app-apple-toggle>
+</app-i-toggle>
 \`\`\`
 
 ## Accessibility
