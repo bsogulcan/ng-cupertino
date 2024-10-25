@@ -1,0 +1,65 @@
+@import "../../../fonts.scss";
+
+.toggle-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.toggle-input {
+  display: none;
+}
+
+.toggle-label {
+  position: relative;
+  display: inline-block;
+  width: 51px;
+  height: 31px;
+  background-color: var(--fill-secondary);
+  border-radius: 31px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 27px;
+  height: 27px;
+  background-color: var(--white);
+  border-radius: 50%;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+  filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.4)) drop-shadow(0px 3px 8px rgba(0, 0, 0, 0.15)) drop-shadow(0px 3px 1px rgba(0, 0, 0, 0.06));
+}
+
+.toggle-input:checked + .toggle-label {
+  background-color: var(--green);
+}
+
+.toggle-input:checked + .toggle-label .toggle-button {
+  transform: translateX(20px);
+}
+
+.toggle-text {
+  @extend .body;
+  color: var(--black);
+  cursor: pointer;
+}
+
+/* Disable state */
+.toggle-input:disabled + .toggle-label {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.toggle-input:disabled ~ .toggle-text {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Focus state */
+.toggle-input:focus-visible + .toggle-label {
+  box-shadow: 0 0 0 3px rgba(0, 125, 250, 0.6);
+}
