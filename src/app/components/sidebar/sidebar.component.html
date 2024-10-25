@@ -1,0 +1,66 @@
+<div class="sidebar">
+  <i-navigation-bar
+    style="width: 100vw; height: 100vh"
+    [title]="title"
+    [showShadow]="false"
+    [centerTitle]="true"
+    [useLargeTitle]="true"
+
+  >
+    <i-button leading [size]="'small'" [style]="'plain'"> Test
+    </i-button>
+
+    <i-button trailing [size]="'small'" [style]="'plain'"> ab123
+    </i-button>
+
+  </i-navigation-bar>
+  <!--  <div class="main-title">{{ title }}</div>-->
+
+  <ng-container *ngTemplateOutlet="menuTemplate; context: { $implicit: items, level: 0 }">
+  </ng-container>
+
+</div>
+
+<ng-template #menuTemplate let-items let-level="level">
+  <ng-container *ngFor="let item of items">
+    <!-- Regular item -->
+    <div *ngIf="item.type === 'item'"
+         class="item"
+         [class.active]="item.isActive"
+         [style.padding-left.px]="level * 16 + 16"
+         (click)="onItemClick(item)">
+      <div class="item-content">
+        <div class="item-left">
+          @if (item.icon) {
+            <i-feather [name]="item.icon"></i-feather>
+          }
+          <span class="item-title">{{ item.title }}</span>
+        </div>
+        <ng-container *ngIf="item.detail || item.hasDetailIcon">
+          @if (item.detail) {
+            <span class="detail">{{ item.detail }}</span>
+          }
+          @if (item.detailIcon) {
+            <i-feather class="detail-icon" [name]="item.detailIcon"></i-feather>
+          }
+        </ng-container>
+      </div>
+    </div>
+
+    <!-- Section -->
+    <ng-container *ngIf="item.type === 'section'">
+      <div class="section-header"
+           [style.padding-left.px]="level * 16 + 16"
+           (click)="toggleSection(item)">
+        <span class="section-title">{{ item.title }}</span>
+        <i class="icon" [class.expanded]="item.isExpanded">&#9660;</i>
+      </div>
+
+      <!-- Recursive template for children -->
+      <ng-container *ngIf="item.isExpanded && item.children">
+        <ng-container *ngTemplateOutlet="menuTemplate; context: { $implicit: item.children, level: level + 1 }">
+        </ng-container>
+      </ng-container>
+    </ng-container>
+  </ng-container>
+</ng-template>
