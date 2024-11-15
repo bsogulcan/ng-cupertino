@@ -1,0 +1,20 @@
+<div class="toolbar-container">
+
+    <div class="toolbar">
+        <div class="toolbar-section leading">
+            <div class="button-group">
+                <ng-content select="[leading]"></ng-content>
+            </div>
+        </div>
+
+        <div class="toolbar-section title" [class.center-title]="center">
+            <ng-content></ng-content>
+        </div>
+
+        <div class="toolbar-section trailing">
+            <div class="button-group">
+                <ng-content select="[trailing]"></ng-content>
+            </div>
+        </div>
+    </div>
+</div>

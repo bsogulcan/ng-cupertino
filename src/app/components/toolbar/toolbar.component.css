@@ -1,0 +1,50 @@
+.toolbar-container {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    width: 100%;
+    background-color: var(--background-primary);
+}
+
+.toolbar {
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8px;
+    position: relative;
+    background-color: var(--background-primary);
+}
+
+.toolbar.with-shadow {
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.toolbar-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    min-width: 0;
+}
+
+.toolbar-section.leading {
+    justify-content: flex-start;
+}
+
+.toolbar-section.trailing {
+    justify-content: flex-end;
+}
+
+.toolbar-section.title {
+    flex: 2;
+    justify-content: flex-start;
+    padding: 0 8px;
+}
+
+.button-group {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}

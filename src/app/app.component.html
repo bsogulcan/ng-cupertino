@@ -1,11 +1,61 @@
-<div
-  class="dark"
-  style="
-    width: 100vw;
-    height: 100vh;
-    background-color: var(--background-primary);
-  "
->
-  <h1 class="large-title">LargeTitle</h1>
-  <i-button [style]="'gray'">Play</i-button>
+<div class="admin-layout">
+
+    <i-sidebar style="border-right: 1px solid var(--background-secondary);"
+               class="sidebar"
+               title="Admin Template"
+               [items]="menuItems"
+    >
+        <i-navigation-bar
+                title="Admin Dashboard"
+                [showShadow]="false"
+                [useLargeTitle]="true"
+        >
+        </i-navigation-bar>
+    </i-sidebar>
+
+    <div class="main-content">
+        <i-toolbar>
+            <ng-container leading>
+                <i-button [style]="'plain'">
+                    <i-feather [name]="'menu'"></i-feather>
+                </i-button>
+            </ng-container>
+
+            <ng-container trailing>
+                <i-toggle [checked]="isDarkTheme" (checkedChange)="toggleTheme()" label="Dark Mode"></i-toggle>
+                <i-button [style]="'plain'">
+                    <i-feather [name]="'user'"></i-feather>
+                </i-button>
+            </ng-container>
+        </i-toolbar>
+
+        <div class="content body">
+
+            <i-navigation-bar
+                    [showShadow]="true"
+                    [centerTitle]="true"
+                    title="Overview"
+            >
+                <ng-container leading>
+                    <i-button [style]="'plain'">
+                        <i-feather [name]="'arrow-left'"></i-feather>
+                        Settings
+                    </i-button>
+                </ng-container>
+
+
+            </i-navigation-bar>
+
+
+            <div class="menu-background" style="margin: 20px">
+                <div class="menu-content">
+                    <div class="menu-item">
+                        <span class="label">Test</span>
+                        <i-text-field placeholder="Text Field"></i-text-field>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
 </div>

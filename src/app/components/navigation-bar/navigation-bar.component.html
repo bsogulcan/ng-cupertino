@@ -1,62 +1,29 @@
 <nav class="nav-container" [class.large-title]="useLargeTitle">
-  <!-- Main Navigation Bar -->
-  <div class="nav-bar" [class.with-shadow]="showShadow">
-    <!-- Leading Buttons -->
-    <div class="nav-section leading">
-      <div class="button-group">
-        <ng-content select="[leading]"></ng-content>
-<!--        @if (leadingButtons?.length > 0) {-->
-
-<!--          @for (button of leadingButtons; track button) {-->
-<!--            <i-button-->
-<!--              [size]="button.size"-->
-<!--              [style]="button.style"-->
-<!--              (click)="button.action && button.action()"-->
-<!--            >-->
-<!--              @if (button.icon) {-->
-<!--                {{ button.icon }}-->
-<!--              }-->
-<!--              {{ button.label }}-->
-<!--            </i-button>-->
-<!--          }-->
-<!--        }-->
-      </div>
-    </div>
-
-
-    <!-- Title -->
-    <div class="nav-section title" [class.center-title]="centerTitle">
-      <h1 class="nav-title" [class.animated]="useLargeTitle">{{ title }}</h1>
-    </div>
-
-    <!-- Trailing Buttons -->
-      <div class="nav-section trailing">
-        <div class="button-group">
-          <ng-content select="[trailing]"></ng-content>
-<!--          @if (trailingButtons?.length > 0) {-->
-
-
-<!--          @for (button of trailingButtons; track button) {-->
-<!--            <i-button-->
-<!--              [size]="button.size"-->
-<!--              [style]="button.style"-->
-<!--              (click)="button.action && button.action()"-->
-<!--            >-->
-<!--              @if (button.icon) {-->
-<!--                {{ button.icon }}-->
-<!--              }-->
-<!--              {{ button.label }}-->
-<!--            </i-button>-->
-<!--          }-->
-<!--          }-->
-
+    <!-- Main Navigation Bar -->
+    <div class="nav-bar" [class.with-shadow]="showShadow">
+        <!-- Leading Buttons -->
+        <div class="nav-section leading">
+            <div class="button-group">
+                <ng-content select="[leading]"></ng-content>
+            </div>
         </div>
-      </div>
-  </div>
+
+        <!-- Title -->
+        <div class="nav-section title" [class.center-title]="centerTitle">
+            <h1 class="nav-title" [class.animated]="useLargeTitle">{{ title }}</h1>
+        </div>
+
+        <!-- Trailing Buttons -->
+        <div class="nav-section trailing">
+            <div class="button-group">
+                <ng-content select="[trailing]"></ng-content>
+            </div>
+        </div>
+    </div>
 
 
-  <!-- Large Title (if enabled) -->
-  <div *ngIf="useLargeTitle" class="large-title-container">
-    <span class="large-title">{{ title }}</span>
-  </div>
+    <!-- Large Title (if enabled) -->
+    <div *ngIf="useLargeTitle" class="large-title-container">
+        <span class="large-title">{{ title }}</span>
+    </div>
 </nav>

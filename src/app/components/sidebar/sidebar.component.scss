@@ -45,8 +45,7 @@
   cursor: pointer;
   position: relative;
   padding: 8px 16px;
-  transition: box-shadow 0.3s ease, background-color 0.3s ease;
-
+  
   &.active {
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -54,13 +53,12 @@
 }
 
 .item:hover {
-  background: rgba(0, 0, 0, 0.05);
+  //background: rgba(0, 0, 0, 0.05);
 }
 
 .item.active {
   background: var(--misc-sidebar-fill-selected);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.24);
-
   border-radius: 11px;
 }
 
